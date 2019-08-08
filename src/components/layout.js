@@ -1,71 +1,66 @@
 import React from "react"
-import { Link } from "gatsby"
+import { FiMoon, FiSun } from "react-icons/fi"
 
-import { rhythm, scale } from "../utils/typography"
+import { isRunningInBrowser } from "../utils/helpers"
+import Sidebar from "./sidebar"
+import Switch from "./switch"
 
 class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
+  constructor(props) {
+    super(props)
+    this.state = {
+      theme: "light",
     }
+  }
+
+  componentWillMount() {
+    if (isRunningInBrowser()) {
+      let theme = JSON.parse(localStorage.getItem("theme"))
+      if (theme !== null) {
+        this.setState({ theme })
+        document.documentElement.setAttribute("data-theme", theme)
+      }
+    }
+  }
+
+  toggleTheme = () => {
+    const theme = this.state.theme === "light" ? "dark" : "light"
+    this.setState({ theme })
+    document.documentElement.setAttribute("data-theme", theme)
+    isRunningInBrowser() && localStorage.setItem("theme", JSON.stringify(theme))
+  }
+
+  render() {
+    const { location, title, children, currentLanguage } = this.props
+    const { theme } = this.state
+    const isOn = theme !== "light" ? true : false
+
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
+      <div>
+        <div className="container">
+          <div className="d-flex justify-content-end p-2">
+            <div style={{ marginTop: "-0.5px", paddingRight: "0.5rem" }}>
+              {isOn ? (
+                <FiMoon style={{ color: "#f5f3ce", fontSize: "1.5rem" }} />
+              ) : (
+                <FiSun style={{ color: "#ecbd2c", fontSize: "1.5rem" }} />
+              )}
+            </div>
+            <Switch isOn={isOn} handleToggle={this.toggleTheme} />
+          </div>
+        </div>
+        <div className="row">
+          <Sidebar
+            title={title}
+            langKey={currentLanguage}
+            location={location}
+          />
+          <div className="col-sm-9 mt-sm-3">{children}</div>
+        </div>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          {currentLanguage}
         </footer>
       </div>
     )
