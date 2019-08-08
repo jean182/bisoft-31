@@ -1,0 +1,10 @@
+.sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sidebar__logo {
+  margin-top: 0;
+  color: var(--primaryTheme);
+}

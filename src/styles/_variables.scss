@@ -1,0 +1,21 @@
+html {
+  --primary: #ff7597;
+  --primaryTheme: #ff0266;
+  --backgroundColor: #fff;
+  --primaryText: #212121;
+  --secondaryText: #7b7b7b;
+  --panelText: #856404;
+  --panelBg: #fff9e0;
+  --panelBorder: hsla(0, 0%, 0%, 0.2);
+}
+
+html[data-theme="dark"] {
+  --primary: #ff7597;
+  --primaryTheme: #ff7597;
+  --backgroundColor: #33292c;
+  --primaryText: rgba(255, 255, 255, 0.8);
+  --secondaryText: rgba(255, 255, 255, 0.6);
+  --panelBg: #d1ecf1;
+  --panelText: #0c5460;
+  --panelBorder: hsla(201, 100%, 50%, 0.78);
+}

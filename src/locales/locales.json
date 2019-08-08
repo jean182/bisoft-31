@@ -1,0 +1,98 @@
+{
+  "appName": "Social Studies",
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "If you want to get my latest posts don't forget to subscribe",
+    "name": "Name",
+    "email": "Email",
+    "submit": " Subscribe"
+  },
+  "footer": {
+    "description": "Made with a lot of love by"
+  },
+  "post": {
+    "readingTime": "min read"
+  },
+  "translations": {
+    "translationAvailable": "Available in",
+    "readOriginal": "Read the original",
+    "improveTranslation": "Improve this translation",
+    "viewAll": "View all translated posts"
+  },
+  "es": {
+    "appName": "Estudios Sociales",
+    "newsletter": {
+      "title": "Boletín Informativo",
+      "description": "Si quieres obtener mis últimas publicaciones no olvides suscribirte",
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "submit": "Suscribirse"
+    },
+    "footer": {
+      "description": "Hecho con mucho amor por"
+    },
+    "translations": {
+      "translationAvailable": "Disponible en",
+      "readOriginal": "Lee el original",
+      "improveTranslation": "Mejorar esta traducción",
+      "viewAll": "Ver todas las publicaciones traducidas"
+    }
+  },
+  "fr": {
+    "appName": "Études sociales",
+    "newsletter": {
+      "title": "Bulletin",
+      "description": "Si vous voulez recevoir mes dernières publications, n'oubliez pas de vous abonner",
+      "name": "Nom",
+      "email": "Courrier Électronique",
+      "submit": "S'abonner"
+    },
+    "footer": {
+      "description": "Fait avec beaucoup d'amour par"
+    },
+    "translations": {
+      "translationAvailable": "Disponible en",
+      "readOriginal": "Lire l'original",
+      "improveTranslation": "Améliorer cette traduction",
+      "viewAll": "Voir toutes les publications traduites"
+    }
+  },
+  "it": {
+    "appName": "Studi sociali",
+    "newsletter": {
+      "title": "Bollettino",
+      "description": "Se vuoi ricevere i miei ultimi post, non dimenticare di iscriverti",
+      "name": "Nome",
+      "email": "Email",
+      "submit": " Abbonarsi"
+    },
+    "footer": {
+      "description": "Fatto con molto amore da"
+    },
+    "translations": {
+      "translationAvailable": "Disponibile in",
+      "readOriginal": "Leggi l'originale",
+      "improveTranslation": "Migliora questa traduzione",
+      "viewAll": "Vedi tutte le pubblicazioni tradotte"
+    }
+  },
+  "pt-br": {
+    "appName": "Estudos Sociais",
+    "newsletter": {
+      "title": "Boletim Informativo",
+      "description": "Se você deseja obter minhas publicações mais recentes, não se esqueça de se inscrever",
+      "name": "Nome",
+      "email": "Correio Eletrônico",
+      "submit": " Subscrever"
+    },
+    "footer": {
+      "description": "Feito com muito amor por"
+    },
+    "translations": {
+      "translationAvailable": "Disponível em",
+      "readOriginal": "Leia o original",
+      "improveTranslation": "Melhore esta tradução",
+      "viewAll": "Veja todas as publicações traduzidas"
+    }
+  }
+}
