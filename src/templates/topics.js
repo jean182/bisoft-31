@@ -1,24 +1,40 @@
 import React from "react"
 import PropTypes from "prop-types"
-// Components
 import { Link, graphql } from "gatsby"
-const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
+import { rhythm } from "../utils/typography"
+import Layout from "../components/layout"
+
+const Topics = ({ pageContext, data }) => {
+  const { topic } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`
+  const topicHeader = `${totalCount} ${
+    totalCount === 1 ? "tema" : "temas"
+  } de "${topic}"`
   return (
-    <div>
-      <h1>{tagHeader}</h1>
+    <Layout>
+      <h1>{topicHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
           return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
+            <div key={slug}>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: `none` }} to={slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>{node.frontmatter.date}</small>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+              />
+            </div>
           )
         })}
       </ul>
@@ -26,13 +42,13 @@ const Tags = ({ pageContext, data }) => {
               This links to a page that does not yet exist.
               We'll come back to it!
             */}
-      <Link to="/tags">All tags</Link>
-    </div>
+      <Link to="/topics">Todos los temas</Link>
+    </Layout>
   )
 }
-Tags.propTypes = {
+Topics.propTypes = {
   pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
+    topic: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -52,13 +68,13 @@ Tags.propTypes = {
     }),
   }),
 }
-export default Tags
+export default Topics
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($topic: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { topics: { in: [$topic] } } }
     ) {
       totalCount
       edges {
@@ -67,7 +83,14 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             title
+            description
+          }
+          fields {
+            readingTime {
+              minutes
+            }
           }
         }
       }

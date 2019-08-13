@@ -8,7 +8,7 @@ class Grades extends React.Component {
   render() {
     let { translations, grade, gradeLink, editUrl } = this.props
     let readerGrades = translations.filter(grade => grade !== "ru")
-
+    console.log(translations)
     return (
       <div className="translations">
         <Panel style={{ fontFamily: systemFont }}>
@@ -32,17 +32,20 @@ class Grades extends React.Component {
               ))}
             </span>
           )}
-          {grade !== "all" && (
+          {function findMainTranslation(translation) {
+            return translation === "all"
+          } !== undefined && (
             <>
               <br />
               <br />
-              <Link
-                style={{ color: "var(--fallBackLink)" }}
-                to={gradeLink("all")}
-              >
-                Ver Principal
-              </Link>
-              {" ⋮ "}
+              {grade === "all" && (
+                <Link
+                  style={{ color: "var(--fallBackLink)" }}
+                  to={gradeLink("all")}
+                >
+                  Ver Principal ⋮
+                </Link>
+              )}
               <a
                 style={{ color: "var(--fallBackLink)" }}
                 href={editUrl}

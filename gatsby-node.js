@@ -9,7 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve("./src/templates/blog-post.js")
-    const tagTemplate = path.resolve("src/templates/tags.js")
+    const topicTemplate = path.resolve("src/templates/topics.js")
 
     // Create index pages for all supported languages
     Object.keys(supportedGrades).forEach(langKey => {
@@ -39,13 +39,13 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
-                    tags
+                    topics
                   }
                 }
               }
             }
-            tagsGroup: allMarkdownRemark(limit: 2000) {
-              group(field: frontmatter___tags) {
+            topicsGroup: allMarkdownRemark(limit: 2000) {
+              group(field: frontmatter___topics) {
                 fieldValue
               }
             }
@@ -111,15 +111,15 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
 
-          // Extract tag data from query
-          const tags = result.data.tagsGroup.group
-          // Make tag pages
-          tags.forEach(tag => {
+          // Extract topic data from query
+          const topics = result.data.topicsGroup.group
+          // Make topic pages
+          topics.forEach(topic => {
             createPage({
-              path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-              component: tagTemplate,
+              path: `/topics/${_.kebabCase(topic.fieldValue)}/`,
+              component: topicTemplate,
               context: {
-                tag: tag.fieldValue,
+                topic: topic.fieldValue,
               },
             })
           })

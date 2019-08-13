@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import SideTags from "./sidetags"
+import TopicsContainer from "./topics-container"
 
 function Sidebar() {
   return (
@@ -25,7 +25,7 @@ function Sidebar() {
               <Link className="link-unstyled" to={`/`}>
                 <Img fluid={sources} />
               </Link>
-              <SideTags />
+              <TopicsContainer />
             </nav>
           </div>
         )
