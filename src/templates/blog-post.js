@@ -14,7 +14,7 @@ import {
 import { formatPostDate, formatReadingTime } from "../utils/helpers"
 
 const GITHUB_USERNAME = "jean182"
-const GITHUB_REPO_NAME = "blog-182"
+const GITHUB_REPO_NAME = "bisoft-31"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -52,7 +52,7 @@ class BlogPostTemplate extends React.Component {
     // TODO: this curried function is annoying
     const gradeLink = createLanguageLink(slug, grade)
     const enSlug = gradeLink("all")
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${enSlug.slice(
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/develop/src/pages/${enSlug.slice(
       1,
       enSlug.length - 1
     )}/index${grade === "all" ? "" : "." + grade}.md`

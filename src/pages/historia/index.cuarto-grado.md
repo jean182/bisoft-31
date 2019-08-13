@@ -2,6 +2,7 @@
 title: Historia
 date: 2019-08-10T04:23:00.000Z
 description: La historia y su importancía
+tags: ["historia"]
 ---
 
 ## Definición

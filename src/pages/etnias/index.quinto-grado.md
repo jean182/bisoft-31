@@ -2,6 +2,7 @@
 title: Etnias
 date: 2019-08-10T04:23:00.000Z
 description: Preambulo
+tags: ["historia"]
 ---
 
 ## Definición
