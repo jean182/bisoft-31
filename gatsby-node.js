@@ -9,6 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve("./src/templates/blog-post.js")
+    const topicTemplate = path.resolve("src/templates/topics.js")
 
     // Create index pages for all supported languages
     Object.keys(supportedGrades).forEach(langKey => {
@@ -38,8 +39,14 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                   frontmatter {
                     title
+                    topics
                   }
                 }
+              }
+            }
+            topicsGroup: allMarkdownRemark(limit: 2000) {
+              group(field: frontmatter___topics) {
+                fieldValue
               }
             }
           }
@@ -68,7 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
             const directoryName = _.get(post, "node.fields.directoryName")
             const langKey = _.get(post, "node.fields.langKey")
 
-            if (directoryName && langKey && langKey !== "all") {
+            if (directoryName && langKey) {
               ;(result[directoryName] || (result[directoryName] = [])).push(
                 langKey
               )
@@ -102,6 +109,19 @@ exports.createPages = ({ graphql, actions }) => {
               translations,
               translatedLinks: [],
             },
+          })
+
+          // Extract topic data from query
+          const topics = result.data.topicsGroup.group
+          // Make topic pages
+          topics.forEach(topic => {
+            createPage({
+              path: `/temas/${_.kebabCase(topic.fieldValue)}/`,
+              component: topicTemplate,
+              context: {
+                topic: topic.fieldValue,
+              },
+            })
           })
 
           const otherLangPosts = posts.filter(

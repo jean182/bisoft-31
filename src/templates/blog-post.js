@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import _ from "lodash"
 import get from "lodash/get"
 
 import Layout from "../components/layout"
@@ -14,7 +15,7 @@ import {
 import { formatPostDate, formatReadingTime } from "../utils/helpers"
 
 const GITHUB_USERNAME = "jean182"
-const GITHUB_REPO_NAME = "blog-182"
+const GITHUB_REPO_NAME = "bisoft-31"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -29,10 +30,8 @@ class BlogPostTemplate extends React.Component {
     } = this.props.pageContext
     const grade = post.fields.langKey || ""
 
-    // Replace original links with translated when available.
     let html = post.html
     translatedLinks.forEach(link => {
-      // jeez
       function escapeRegExp(str) {
         return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
       }
@@ -52,7 +51,7 @@ class BlogPostTemplate extends React.Component {
     // TODO: this curried function is annoying
     const gradeLink = createLanguageLink(slug, grade)
     const enSlug = gradeLink("all")
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${enSlug.slice(
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/develop/src/pages/${enSlug.slice(
       1,
       enSlug.length - 1
     )}/index${grade === "all" ? "" : "." + grade}.md`
@@ -79,7 +78,7 @@ class BlogPostTemplate extends React.Component {
             }}
           >
             {formatPostDate(post.frontmatter.date, grade)} -{" "}
-            {formatReadingTime(post.fields.readingTime.minutes, grade)}
+            {formatReadingTime(post.fields.readingTime.minutes)}
           </p>
           {translations.length > 0 && (
             <Grades
@@ -87,6 +86,7 @@ class BlogPostTemplate extends React.Component {
               translations={translations}
               gradeLink={gradeLink}
               grade={grade}
+              topic={_.kebabCase(_.head(post.frontmatter.topics))}
             />
           )}
           <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -144,6 +144,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        topics
       }
       fields {
         readingTime {
