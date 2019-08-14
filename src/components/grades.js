@@ -1,14 +1,15 @@
 import React from "react"
 import Panel from "./panel"
+import _ from "lodash"
 import { Link } from "gatsby"
 import { codeToLanguage } from "../utils/i18n"
 import { systemFont } from "../utils/helpers"
 
 class Grades extends React.Component {
   render() {
-    let { translations, grade, gradeLink, editUrl } = this.props
-    let readerGrades = translations.filter(grade => grade !== "ru")
-
+    let { translations, grade, gradeLink, editUrl, topic } = this.props
+    let readerGrades = translations.filter(grade => grade !== "all")
+    let gradeURL = grade === "all" ? "/" : `/${grade}`
     return (
       <div className="translations">
         <Panel style={{ fontFamily: systemFont }}>
@@ -32,17 +33,21 @@ class Grades extends React.Component {
               ))}
             </span>
           )}
-          {grade !== "all" && (
+          {
             <>
               <br />
               <br />
-              <Link
-                style={{ color: "var(--fallBackLink)" }}
-                to={gradeLink("all")}
-              >
-                Ver Principal
-              </Link>
-              {" ⋮ "}
+              {grade !== "all" && _.includes(translations, "all") && (
+                <>
+                  <Link
+                    style={{ color: "var(--fallBackLink)" }}
+                    to={gradeLink("all")}
+                  >
+                    Ver Principal
+                  </Link>
+                  <span> ⋮ </span>
+                </>
+              )}
               <a
                 style={{ color: "var(--fallBackLink)" }}
                 href={editUrl}
@@ -52,11 +57,18 @@ class Grades extends React.Component {
                 Mejorar este tema
               </a>
               {" ⋮ "}
-              <Link style={{ color: "var(--fallBackLink)" }} to={`/${grade}`}>
-                Ver Todos
+              <Link style={{ color: "var(--fallBackLink)" }} to={gradeURL}>
+                Ver todos por grado
+              </Link>{" "}
+              {" ⋮ "}
+              <Link
+                style={{ color: "var(--fallBackLink)" }}
+                to={`/temas/${topic}`}
+              >
+                Ver todos por tema
               </Link>{" "}
             </>
-          )}
+          }
         </Panel>
       </div>
     )

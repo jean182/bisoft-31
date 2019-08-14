@@ -18,18 +18,7 @@ export const formatPostDate = (date, grade) => {
   return date.toLocaleDateString(...args)
 }
 
-export const formatReadingTime = (minutes, grade) => {
+export const formatReadingTime = minutes => {
   const roundMinutes = Math.ceil(minutes)
-  switch (grade) {
-    case "es":
-      return `${roundMinutes} min de lectura`
-    case "fr":
-      return `${roundMinutes} min de lecture`
-    case "it":
-      return `${roundMinutes} min di lettura`
-    case "pt-br":
-      return `${roundMinutes} min de leitura`
-    default:
-      return `${roundMinutes} min read`
-  }
+  return `${roundMinutes} min de lectura`
 }

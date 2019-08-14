@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import { formatPostDate, formatReadingTime } from "../utils/helpers"
 import "bootstrap-4-grid/css/grid.min.css"
 import "../styles/main.scss"
 
@@ -35,7 +36,10 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
+                <small>
+                  {formatPostDate(node.frontmatter.date, langKey)} -{" "}
+                  {formatReadingTime(node.fields.readingTime.minutes)}
+                </small>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
