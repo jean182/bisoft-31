@@ -1,12 +1,12 @@
 # BISOFT-31
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0ceb158c-3283-414f-9371-029a8e22d50e/deploy-status)](https://app.netlify.com/sites/niceguysfinishlast/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/75340a98-eeed-4f3c-a9dd-e61155f864a7/deploy-status)](https://app.netlify.com/sites/mep-sociales/deploys)
 
 BISOFT-31 Second project.
 
 Feel free to fork it, and make it better.
 
-This is the live [site](https://objective-almeida-a91c70.netlify.com/)
+This is the live [site](https://mep-sociales.netlify.com/)
 
 ## 🚀 Quick start
 
