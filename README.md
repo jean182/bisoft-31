@@ -6,7 +6,7 @@ BISOFT-31 Second project.
 
 Feel free to fork it, and make it better.
 
-This is the live [site](https://niceguysfinishlast.dev)
+This is the live [site](https://objective-almeida-a91c70.netlify.com/)
 
 ## 🚀 Quick start
 
