@@ -9,7 +9,7 @@ const Topics = ({ pageContext, data }) => {
   const { topic } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const topicHeader = `${totalCount} ${
-    totalCount === 1 ? "tema" : "temas"
+    totalCount === 1 ? "subtema" : "subtemas"
   } de "${topic}"`
   return (
     <Layout>
@@ -25,7 +25,7 @@ const Topics = ({ pageContext, data }) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={slug}>
+                <Link className="post__link" to={slug}>
                   {title}
                 </Link>
               </h3>

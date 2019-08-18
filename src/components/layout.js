@@ -37,17 +37,15 @@ class Layout extends React.Component {
 
     return (
       <div>
-        <div className="container">
-          <div className="d-flex justify-content-end p-2">
-            <div style={{ marginTop: "-0.5px", paddingRight: "0.5rem" }}>
-              {isOn ? (
-                <FiMoon style={{ color: "#f5f3ce", fontSize: "1.5rem" }} />
-              ) : (
-                <FiSun style={{ color: "#ecbd2c", fontSize: "1.5rem" }} />
-              )}
-            </div>
-            <Switch isOn={isOn} handleToggle={this.toggleTheme} />
+        <div className="d-flex justify-content-end pt-3 px-sm-5 mr-3">
+          <div style={{ marginTop: "-0.5px", paddingRight: "0.5rem" }}>
+            {isOn ? (
+              <FiMoon style={{ color: "#f5f3ce", fontSize: "1.5rem" }} />
+            ) : (
+              <FiSun style={{ color: "#ecbd2c", fontSize: "1.5rem" }} />
+            )}
           </div>
+          <Switch isOn={isOn} handleToggle={this.toggleTheme} />
         </div>
         <div className="row">
           <Sidebar
@@ -57,10 +55,10 @@ class Layout extends React.Component {
           />
           <div className="col-sm-9 mt-sm-3">{children}</div>
         </div>
-        <footer>
+        <footer className="ml-5">
           © {new Date().getFullYear()}, Built with
           {` `}
-          {currentLanguage}
+          gatsby
         </footer>
       </div>
     )

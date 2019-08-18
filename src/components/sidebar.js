@@ -16,13 +16,16 @@ function Sidebar() {
           },
         ]
         return (
-          <div
-            className="col-sm-3"
-            style={{ borderRight: "1px solid #dee2e6!important" }}
-          >
+          <div className="col-sm-3">
             <nav className="container">
               <Link className="link-unstyled" to={`/`}>
                 <Img fluid={sources} />
+                <h4
+                  className="mt-0 ml-3"
+                  style={{ textAlign: "center", color: "var(--primary)" }}
+                >
+                  Complementando la educación primaria
+                </h4>
               </Link>
               <TopicsContainer />
             </nav>

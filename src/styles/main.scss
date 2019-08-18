@@ -8,6 +8,15 @@ body {
   font-weight: 400;
 }
 
+a {
+  color: var(--primaryLink);
+}
+
+.post__link {
+  color: var(--titleLink);
+  box-shadow: none;
+}
+
 .link-unstyled {
   box-shadow: none;
   text-decoration: none;
@@ -18,4 +27,8 @@ body {
   color: var(--panelText);
   background-color: var(--panelBg);
   border-color: var(--panelBorder);
+}
+
+.article__content__title {
+  color: var(--primary);
 }
