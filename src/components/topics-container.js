@@ -10,7 +10,7 @@ function TopicsContainer() {
       query={query}
       render={data => {
         return (
-          <div className="container">
+          <div className="container mt-3">
             <ol>
               {data.allMarkdownRemark.group.map(topic => (
                 <li key={topic.fieldValue}>
