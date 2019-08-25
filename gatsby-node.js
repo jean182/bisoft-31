@@ -10,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve("./src/templates/blog-post.js")
     const topicTemplate = path.resolve("src/templates/topics.js")
+    const gameTemplate = path.resolve("src/templates/game-question.js")
 
     // Create index pages for all supported languages
     Object.keys(supportedGrades).forEach(langKey => {
@@ -47,6 +48,18 @@ exports.createPages = ({ graphql, actions }) => {
             topicsGroup: allMarkdownRemark(limit: 2000) {
               group(field: frontmatter___topics) {
                 fieldValue
+              }
+            }
+            allJuegosJson {
+              edges {
+                node {
+                  question {
+                    intro
+                    name
+                  }
+                  topic
+                  grade
+                }
               }
             }
           }
@@ -120,6 +133,21 @@ exports.createPages = ({ graphql, actions }) => {
               component: topicTemplate,
               context: {
                 topic: topic.fieldValue,
+              },
+            })
+          })
+
+          // Extract game data from query
+          const games = result.data.allJuegosJson.edges
+
+          games.forEach(game => {
+            const { topic, grade } = game.node
+            createPage({
+              path: `/juegos/${_.kebabCase(topic)}/${_.kebabCase(grade)}/`,
+              component: gameTemplate,
+              context: {
+                topic: _.kebabCase(topic),
+                grade: _.kebabCase(grade),
               },
             })
           })

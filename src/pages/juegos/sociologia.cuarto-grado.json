@@ -1,0 +1,15 @@
+{
+  "question": {
+    "intro": "",
+    "name": "¿Cuál de las siguientes opciones no es una región socioeconómica de nuestro pais?",
+    "answers": [
+      { "id": 1, "answer": "Región Central" },
+      { "id": 2, "answer": "Región Chorotega" },
+      { "id": 3, "answer": "Región Pacífico Central" },
+      { "id": 4, "answer": "Región Guanacasteca" }
+    ],
+    "correct": 4
+  },
+  "grade": "cuarto-grado",
+  "topic": "sociologia"
+}

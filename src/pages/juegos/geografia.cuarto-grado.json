@@ -1,0 +1,15 @@
+{
+  "question": {
+    "intro": "",
+    "name": "¿Cuál de los siguientes países pertenece a Centroamérica?",
+    "answers": [
+      { "id": 1, "answer": "Francia" },
+      { "id": 2, "answer": "Canadá" },
+      { "id": 3, "answer": "Brasíl" },
+      { "id": 4, "answer": "Panamá" }
+    ],
+    "correct": 4
+  },
+  "grade": "cuarto-grado",
+  "topic": "geografia"
+}
