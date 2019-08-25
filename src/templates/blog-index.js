@@ -4,7 +4,12 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import { formatPostDate, formatReadingTime } from "../utils/helpers"
+import {
+  formatPostDate,
+  formatReadingTime,
+  gameGrade,
+  gameTopic,
+} from "../utils/helpers"
 import "bootstrap-4-grid/css/grid.min.css"
 import "../styles/main.scss"
 
@@ -14,6 +19,7 @@ class BlogIndex extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     const langKey = this.props.pageContext.langKey
     const posts = data.allMarkdownRemark.edges
+    const games = data.allJuegosJson.nodes
 
     return (
       <Layout
@@ -23,6 +29,7 @@ class BlogIndex extends React.Component {
       >
         <div className="container">
           <SEO title="All posts" />
+          <h1 className="article__content__title">Lista de temas.</h1>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -48,6 +55,29 @@ class BlogIndex extends React.Component {
               </div>
             )
           })}
+          {langKey === "all" && (
+            <h1 className="article__content__title">Juegos</h1>
+          )}
+          {langKey === "all" &&
+            games.map(node => {
+              return (
+                <div key={node.id}>
+                  <h3
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  >
+                    <Link
+                      className="post__link"
+                      to={`/juegos/${node.topic}/${node.grade}/`}
+                    >
+                      {gameTopic(node.topic)}
+                    </Link>
+                  </h3>
+                  <p>Para: {gameGrade(node.grade)}</p>
+                </div>
+              )
+            })}
         </div>
       </Layout>
     )
@@ -85,6 +115,13 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    allJuegosJson {
+      nodes {
+        id
+        grade
+        topic
       }
     }
   }

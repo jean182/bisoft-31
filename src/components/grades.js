@@ -3,7 +3,6 @@ import Panel from "./panel"
 import _ from "lodash"
 import { Link } from "gatsby"
 import { codeToLanguage } from "../utils/i18n"
-import { systemFont } from "../utils/helpers"
 
 class Grades extends React.Component {
   render() {
@@ -11,8 +10,8 @@ class Grades extends React.Component {
     let readerGrades = translations.filter(grade => grade !== "all")
     let gradeURL = grade === "all" ? "/" : `/${grade}`
     return (
-      <div className="translations">
-        <Panel style={{ fontFamily: systemFont }}>
+      <div>
+        <Panel>
           {translations.length > 0 && (
             <span>
               <span>Disponible para: </span>

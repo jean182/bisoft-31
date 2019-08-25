@@ -22,3 +22,27 @@ export const formatReadingTime = minutes => {
   const roundMinutes = Math.ceil(minutes)
   return `${roundMinutes} min de lectura`
 }
+
+export const gameGrade = grade => {
+  switch (grade) {
+    case "cuarto-grado":
+      return "Cuarto Grado"
+    case "quinto-grado":
+      return "Quinto Grado"
+    case "sexto-grado":
+      return "Sexto Grado"
+    default:
+      break
+  }
+}
+
+export const gameTopic = topic => {
+  switch (topic) {
+    case "sociologia":
+      return "Sociología"
+    case "geografia":
+      return "Geografía"
+    default:
+      break
+  }
+}

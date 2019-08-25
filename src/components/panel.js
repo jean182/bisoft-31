@@ -1,10 +1,12 @@
 import React from "react"
+import { systemFont } from "../utils/helpers"
 
 function Panel({ children, style = {} }) {
   return (
     <div
       className="panel"
       style={{
+        fontFamily: systemFont,
         fontSize: "0.9em",
         borderRadius: "0.75em",
         padding: "0.75em",

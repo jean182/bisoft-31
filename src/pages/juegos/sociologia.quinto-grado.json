@@ -1,0 +1,15 @@
+{
+  "question": {
+    "intro": "La organización básica partía de la aldea, eje de la vida cotidiana, que incluía las actividades de comercio, producción agrícola y artesanal, y la guerra. Varias aldeas constituían un cacicazgo, cuya importancia en la jerarquía del poder variaba de acuerdo con el tamaño de su población y la extensión del territorio que controlara.",
+    "name": "En el texto anterior se hace referencia a un impacto de la conquista española a la:",
+    "answers": [
+      { "id": 1, "answer": "Agricultura" },
+      { "id": 2, "answer": "Religión" },
+      { "id": 3, "answer": "Sociedad" },
+      { "id": 4, "answer": "Todas las anteriores" }
+    ],
+    "correct": 4
+  },
+  "grade": "quinto-grado",
+  "topic": "sociologia"
+}
