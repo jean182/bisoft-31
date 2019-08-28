@@ -1,6 +1,6 @@
 ---
 title: Introduccion a la geografía
-date: 2019-08-10T04:23:00.000Z
+date: 2019-03-22T04:23:00.000Z
 description: Antes de empezar
 topics: ["Geografía"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: Ubicación hemisférica y continental del país.
-date: 2019-08-10T04:23:00.000Z
+date: 2019-03-03T04:23:00.000Z
 description: Acerca de la ubicación en Costa Rica
 topics: ["Geografía"]
 grade: fourth-grade

@@ -1,6 +1,6 @@
 ---
 title: Países vecinos de Costa Rica, construcción de lazos entre países centroamericanos.
-date: 2019-08-10T04:23:00.000Z
+date: 2019-07-27T04:23:00.000Z
 description: Construyendo lazos
 topics: ["Geografía"]
 ---

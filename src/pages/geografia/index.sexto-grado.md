@@ -1,6 +1,6 @@
 ---
 title: Introduccion a la geografía
-date: 2019-08-10T04:23:00.000Z
+date: 2019-08-19T04:23:00.000Z
 description: Lista de subtemas para sexto grado
 topics: ["Geografía"]
 ---
