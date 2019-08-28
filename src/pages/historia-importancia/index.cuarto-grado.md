@@ -1,6 +1,6 @@
 ---
 title: Definición y su importancia en la vida cotidiana de los Estudios Sociales
-date: 2019-08-10T04:23:00.000Z
+date: 2019-06-01T04:23:00.000Z
 description: Importancia de los estudios sociales
 topics: ["Historia"]
 ---

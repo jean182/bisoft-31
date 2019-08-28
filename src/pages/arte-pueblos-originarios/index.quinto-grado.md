@@ -1,6 +1,6 @@
 ---
 title: Arte de los pueblos originarios de Costa Rica.
-date: 2019-08-10T04:23:00.000Z
+date: 2019-07-27T04:23:00.000Z
 description: Visión general
 topics: ["Historia"]
 ---

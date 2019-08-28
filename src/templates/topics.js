@@ -30,7 +30,7 @@ const Topics = ({ pageContext, data }) => {
                 </Link>
               </h3>
               <small>
-                {formatPostDate(node.frontmatter.date, "all")} -{" "}
+                {formatPostDate(node.frontmatter.date, "es")} -{" "}
                 {formatReadingTime(node.fields.readingTime.minutes)}
               </small>
               <p

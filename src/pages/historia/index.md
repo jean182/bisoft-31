@@ -1,6 +1,6 @@
 ---
 title: Introduccion a la historia
-date: 2019-08-10T04:23:00.000Z
+date: 2019-01-11T04:23:00.000Z
 description: Antes de empezar
 topics: ["Historia"]
 ---

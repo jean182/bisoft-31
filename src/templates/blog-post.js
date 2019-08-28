@@ -79,7 +79,7 @@ class BlogPostTemplate extends React.Component {
               marginTop: rhythm(-1),
             }}
           >
-            {formatPostDate(post.frontmatter.date, grade)} -{" "}
+            {formatPostDate(post.frontmatter.date, "es")} -{" "}
             {formatReadingTime(post.fields.readingTime.minutes)}
           </p>
           {translations.length > 0 && (

@@ -47,7 +47,7 @@ class BlogIndex extends React.Component {
                       </Link>
                     </h3>
                     <small>
-                      {formatPostDate(node.frontmatter.date, langKey)} -{" "}
+                      {formatPostDate(node.frontmatter.date, "es")} -{" "}
                       {formatReadingTime(node.fields.readingTime.minutes)}
                     </small>
                     <p
