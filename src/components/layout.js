@@ -55,10 +55,14 @@ class Layout extends React.Component {
           />
           <div className="col-sm-9 mt-sm-3">{children}</div>
         </div>
-        <footer className="ml-5">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          gatsby
+        <footer className="d-flex justify-content-between">
+          <div className="ml-md-5">Ministerio de educación pública</div>
+          <div>
+            © {new Date().getFullYear()}, Hecho con
+            {` `}
+            gatsby
+          </div>
+          <div className="mr-md-5">Desarollado por: Empresa</div>
         </footer>
       </div>
     )

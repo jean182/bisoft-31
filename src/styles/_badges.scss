@@ -10,13 +10,13 @@
   border-radius: 0.25rem;
   border: 1px solid rgba(0, 0, 0, 0.35);
   text-transform: uppercase;
-  color: #000;
+  color: var(--primaryText);
 }
 
 .badge-primary {
-  background-color: rgba(0, 105, 52, 0.3);
+  background-color: var(--inverseLink);
 }
 
 .badge-secondary {
-  background-color: rgba(0, 179, 255, 0.3);
+  background-color: var(--inverseLink);
 }

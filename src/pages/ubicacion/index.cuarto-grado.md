@@ -6,6 +6,8 @@ topics: ["Geografía"]
 grade: fourth-grade
 ---
 
+![Limites](/limites.jpg "Costa Rica")
+
 Puente biológico natural: comunica América del Norte con América del Sur, y constituye un espacio geográfico que une especies de flora y fauna tanto del norte como del sur de América.
 
 - NORTE: Nicaragua.

@@ -1,8 +1,8 @@
 ---
-title: Introduccion a la geografía
+title: Introduccion a la historia
 date: 2019-08-10T04:23:00.000Z
 description: Lista de subtemas para cuarto grado
-topics: ["Geografía"]
+topics: ["Historia"]
 ---
 
 ## Listado de temas para cuarto año:

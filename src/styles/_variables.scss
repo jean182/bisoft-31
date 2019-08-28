@@ -4,6 +4,7 @@ html {
   --backgroundColor: #f9fffd;
   --primaryText: #212121;
   --primaryLink: #2081c3;
+  --inverseLink: #bbdef0;
   --titleLink: #f08700;
   --secondaryText: #7b7b7b;
   --panelText: #212121;
@@ -17,6 +18,7 @@ html[data-theme="dark"] {
   --backgroundColor: #2d2d2d;
   --primaryText: rgba(255, 255, 255, 0.8);
   --primaryLink: #bbdef0;
+  --inverseLink: #2081c3;
   --titleLink: #00a6a6;
   --secondaryText: rgba(255, 255, 255, 0.6);
   --panelBg: #fdb833;
