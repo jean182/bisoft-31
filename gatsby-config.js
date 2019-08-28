@@ -131,18 +131,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `MEP Sociales`,
-        short_name: `MEP`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#f08700`,
-        display: `minimal-ui`,
-        icon: `content/assets/logo-mep.png`,
-      },
-    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
