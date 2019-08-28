@@ -8,11 +8,26 @@ topics: ["Geografía"]
 Formas de relieve de Costa Rica
 El relieve representa, las diversas formas que hay en la tierra.
 
+![Volcan Arenal](/volcan-arenal.jpg "Volcan  Arenal")
+
 Tipos:
 
-Montañas: Son elevaciones en un terreno, según su tamaño se le llaman cerros, colinas o lomas. En los cerros se desarrollan actividades como el cultivo de café y frijoles. En las lomas cultivo de maíz y arroz.
+## Montañas:
+
+Son elevaciones en un terreno, según su tamaño se le llaman cerros, colinas o lomas. En los cerros se desarrollan actividades como el cultivo de café y frijoles. En las lomas cultivo de maíz y arroz.
 Cordilleras: Las cordilleras son montañas unidas entre sí. En algunas hay volcanes. En sus faldas se desarrollan actividades como; la agricultura, ganadería, turismo, entre otras..
-Llanuras: Las llanuras son extensas zonas planas o poco onduladas. En las llanuras se desarrollan actividades como la ganadería y cultivo de melón, sandía, arroz, piña y más productos dependiendo del clima del lugar.
-Valles: Los valles son terrenos planos entre montañas. Generalmente algunos ríos recorren estos paisajes. Son lugares donde se establecen pueblos.
-Ríos: Los ríos son corrientes de agua que nacen en las montañas.
+
+## Llanuras:
+
+Las llanuras son extensas zonas planas o poco onduladas. En las llanuras se desarrollan actividades como la ganadería y cultivo de melón, sandía, arroz, piña y más productos dependiendo del clima del lugar.
+
+## Valles:
+
+Los valles son terrenos planos entre montañas. Generalmente algunos ríos recorren estos paisajes. Son lugares donde se establecen pueblos.
+
+## Ríos:
+
+Los ríos son corrientes de agua que nacen en las montañas.
 Islas: Isla es una porción de tierra rodeada por agua.
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/76jHp21QlLg" frameborder="0" allowfullscreen></iframe>

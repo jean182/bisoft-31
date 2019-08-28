@@ -1,0 +1,27 @@
+{
+  "question": {
+    "intro": "",
+    "name": "¿Cuál de los siguientes no fue un aporte del expresidente Juan Rafael Mora Porras?",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "Fortaleció la actividad cafetalera"
+      },
+      {
+        "id": 2,
+        "answer": "Construyó la Fábrica Nacional de Licores"
+      },
+      {
+        "id": 3,
+        "answer": "Primer presidente afrodescendiente"
+      },
+      {
+        "id": 4,
+        "answer": "Inauguró el sistema de alumbrado público"
+      }
+    ],
+    "correct": 3
+  },
+  "grade": "sexto-grado",
+  "topic": "historia"
+}

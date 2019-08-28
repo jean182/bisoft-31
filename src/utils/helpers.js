@@ -42,6 +42,8 @@ export const gameTopic = topic => {
       return "Sociología"
     case "geografia":
       return "Geografía"
+    case "historia":
+      return "Historia"
     default:
       break
   }

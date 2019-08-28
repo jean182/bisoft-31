@@ -22,6 +22,8 @@ Según el Censo costarricense de 2011 efectuado por el INEC, las regiones socioe
 5. Región Huetar Atlántica.
 6. Región Huetar Norte.
 
+<iframe width="420" height="315" src="https://www.youtube.com/embed/4n32hSvkNMQ" frameborder="0" allowfullscreen></iframe>
+
 ## Región Central
 
 Los principales ríos de esta región son: el río Virilla y el Grande de San Ramón en el Valle Central Occidental y el río Reventazón en el Oriental.

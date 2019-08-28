@@ -36,9 +36,6 @@ module.exports = {
           `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,

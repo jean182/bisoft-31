@@ -1,0 +1,27 @@
+{
+  "question": {
+    "intro": "",
+    "name": "Los indigenas pertenecientes a la Ètnia Cabecar se localizan en:",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "Ujarras"
+      },
+      {
+        "id": 2,
+        "answer": "Salitre"
+      },
+      {
+        "id": 3,
+        "answer": "Cabagra"
+      },
+      {
+        "id": 4,
+        "answer": "Tayni"
+      }
+    ],
+    "correct": 1
+  },
+  "grade": "quinto-grado",
+  "topic": "historia"
+}
