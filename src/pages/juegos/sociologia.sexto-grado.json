@@ -1,0 +1,18 @@
+{
+  "question": {
+    "intro": "",
+    "name": "¿Qué debes evitar en las redes sociales?",
+    "answers": [
+      { "id": 1, "answer": "Publicar contenido personal" },
+      { "id": 2, "answer": "Cuidar tu identidad digital" },
+      { "id": 3, "answer": "Restringir el acceso a tu perfil" },
+      {
+        "id": 4,
+        "answer": "Decidir cuidadosamente cada foto que se vaya a publicar"
+      }
+    ],
+    "correct": 1
+  },
+  "grade": "sexto-grado",
+  "topic": "sociologia"
+}

@@ -1,0 +1,36 @@
+@import "variables";
+@import "sidebar";
+@import "badges";
+@import "jumbotron";
+@import "questions";
+
+body {
+  background: var(--backgroundColor);
+  color: var(--primaryText);
+  font-weight: 400;
+}
+
+a {
+  color: var(--primaryLink);
+}
+
+.post__link {
+  color: var(--titleLink);
+  box-shadow: none;
+}
+
+.link-unstyled {
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.panel {
+  color: var(--panelText);
+  background-color: var(--panelBg);
+  border-color: var(--panelBorder);
+}
+
+.article__content__title {
+  color: var(--primary);
+}

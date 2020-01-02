@@ -1,0 +1,27 @@
+{
+  "question": {
+    "intro": "",
+    "name": "¿Cual es la importancia de los estudios sociales en la vida cotidiana??",
+    "answers": [
+      {
+        "id": 1,
+        "answer": "Ofrecer a los estudiantes una visión general de la sociedad donde viven."
+      },
+      {
+        "id": 2,
+        "answer": "Constituyen la energía para todas las funciones del cuerpo."
+      },
+      {
+        "id": 3,
+        "answer": "Es fundamental para el desarrollo intelectual de los niños, les ayuda a ser lógicos y a razonar ordenadamente."
+      },
+      {
+        "id": 4,
+        "answer": "Estudia el intercambio de bienes y servicios, es de fundamental importancia en nuestra sociedad."
+      }
+    ],
+    "correct": 1
+  },
+  "grade": "cuarto-grado",
+  "topic": "historia"
+}
